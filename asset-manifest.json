@@ -1,0 +1,14 @@
+{
+  "files": {
+    "main.css": "/Curriculum-AI-FrontEnd/static/css/main.4fd08ea3.css",
+    "main.js": "/Curriculum-AI-FrontEnd/static/js/main.b4dc9c64.js",
+    "static/media/logo.jpg": "/Curriculum-AI-FrontEnd/static/media/logo.58e0d32c4ca604b5b3a4.jpg",
+    "index.html": "/Curriculum-AI-FrontEnd/index.html",
+    "main.4fd08ea3.css.map": "/Curriculum-AI-FrontEnd/static/css/main.4fd08ea3.css.map",
+    "main.b4dc9c64.js.map": "/Curriculum-AI-FrontEnd/static/js/main.b4dc9c64.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.4fd08ea3.css",
+    "static/js/main.b4dc9c64.js"
+  ]
+}
