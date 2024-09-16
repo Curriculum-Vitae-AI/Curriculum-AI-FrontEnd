@@ -1,14 +1,14 @@
 {
   "files": {
-    "main.css": "/Curriculum-AI-FrontEnd/static/css/main.4fd08ea3.css",
-    "main.js": "/Curriculum-AI-FrontEnd/static/js/main.b4dc9c64.js",
-    "static/media/logo.jpg": "/Curriculum-AI-FrontEnd/static/media/logo.58e0d32c4ca604b5b3a4.jpg",
+    "main.css": "/Curriculum-AI-FrontEnd/static/css/main.6671e1a1.css",
+    "main.js": "/Curriculum-AI-FrontEnd/static/js/main.682a82e3.js",
+    "static/media/Logo.svg": "/Curriculum-AI-FrontEnd/static/media/Logo.e7196783a85974b55bb95a34c4d38158.svg",
     "index.html": "/Curriculum-AI-FrontEnd/index.html",
-    "main.4fd08ea3.css.map": "/Curriculum-AI-FrontEnd/static/css/main.4fd08ea3.css.map",
-    "main.b4dc9c64.js.map": "/Curriculum-AI-FrontEnd/static/js/main.b4dc9c64.js.map"
+    "main.6671e1a1.css.map": "/Curriculum-AI-FrontEnd/static/css/main.6671e1a1.css.map",
+    "main.682a82e3.js.map": "/Curriculum-AI-FrontEnd/static/js/main.682a82e3.js.map"
   },
   "entrypoints": [
-    "static/css/main.4fd08ea3.css",
-    "static/js/main.b4dc9c64.js"
+    "static/css/main.6671e1a1.css",
+    "static/js/main.682a82e3.js"
   ]
 }
