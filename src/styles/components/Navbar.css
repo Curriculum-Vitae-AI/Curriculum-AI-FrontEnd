@@ -1,0 +1,37 @@
+.Navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 1.25rem;
+}
+
+button {
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+}
+
+#link {
+    color: rgba(0, 92, 165, 1);
+    font-weight: bolder;
+    font-size: 20px;
+    padding: 10px 20px;
+    text-decoration: none;
+}
+.Botoes {
+    display: flex;
+    gap: 20px;
+}
+
+.btn.active {
+    text-decoration: underline;
+    text-decoration-thickness: 3px; 
+    text-underline-offset: 2px; 
+    color: rgba(0, 92, 165, 1);
+}
+
+@media (max-width: 768px) {
+    .Navbar {
+        padding-bottom: 0.625rem;
+    }
+  }
