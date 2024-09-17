@@ -4,3 +4,36 @@
     justify-content: center;
     align-items: center;
 }
+
+.cardHome {
+    padding: 3.125rem;
+    background: linear-gradient(#052D77, #1045A8);
+    border-radius: 30px;
+    color: white;
+    width: 90%;
+    max-width: 1096px;
+    height: 400px;
+}
+
+.carousel {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    margin: 0 auto;
+}
+  
+.carouselItem {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 24px;
+    margin: 0 10px;
+}
+  
+.carouselBtn {
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+}
