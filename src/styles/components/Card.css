@@ -1,0 +1,58 @@
+.card {
+    display: flex;
+    width: 900px;
+}
+
+.esquerda {
+    width: 450px;
+    height: 400px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.titulo{
+    font-size: 30px;
+}
+
+.texto {
+    text-align: justify;
+    width: 420px;
+    font-size: 25px;
+}
+
+.btnGerar {
+    border: none;
+    border-radius: 5px;
+    padding: 15px 40px;
+    cursor: pointer;
+    background-color: white;
+    font-weight: bolder;
+    font-size: 15px;
+    color: rgba(0, 92, 165, 1);
+}
+
+.direita {
+    width: 450px;
+    display: flex; 
+    flex-direction: column; 
+    justify-content: center;
+    align-items: center;
+}
+  
+@media (max-width: 768px) {
+    .cardRoadmap {
+        width: 100%;
+        padding: 1rem;
+        flex-direction: column; 
+    }
+
+    .esquerda, .direita {
+        width: 100%; 
+    }
+
+    .textRoadmap{
+        padding-bottom: 1rem;
+    }
+}
