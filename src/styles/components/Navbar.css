@@ -18,6 +18,15 @@ button {
     padding: 10px 20px;
     text-decoration: none;
 }
+
+.btn {
+    color: rgba(0, 92, 165, 1);
+    font-weight: bolder;
+    font-size: 20px;
+    padding: 10px 20px;
+    text-decoration: none;
+}
+
 .Botoes {
     display: flex;
     gap: 20px;
@@ -29,9 +38,3 @@ button {
     text-underline-offset: 2px; 
     color: rgba(0, 92, 165, 1);
 }
-
-@media (max-width: 768px) {
-    .Navbar {
-        padding-bottom: 0.625rem;
-    }
-  }
