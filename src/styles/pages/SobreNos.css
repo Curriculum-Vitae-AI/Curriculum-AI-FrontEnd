@@ -1,0 +1,20 @@
+.sobreNos {
+    padding: 3rem 5rem 1rem 5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.cardSobreNosPrincipal {
+    padding: 3.125rem;
+    background: linear-gradient(#052D77, #1045A8);
+    border-radius: 30px;
+    color: white;
+    width: 1096px;
+}
+
+.cardSobreNosSegundario {
+    width: 100%;
+    font-size: 25px;
+    text-align: justify;
+}
