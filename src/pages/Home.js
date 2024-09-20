@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 import Card from '../components/Card';
 import imgRoadmap from "../assets/Home/imgRoadmap.svg"
 import imgCarta from "../assets/Home/imgCarta.svg"
@@ -9,6 +10,7 @@ import "../styles/pages/Home.css";
 
 function Home() {
   const [currentIndex, setCurrentIndex] = useState(0);
+  const navigate = useNavigate();
 
   const items = [
     { 
@@ -22,7 +24,7 @@ function Home() {
             que você possa focar somente no aprendizado."
           imgSrc={imgRoadmap}
           imgAlt="Imagem de roadmap"
-          onClick=""
+          onClick={() => navigate('/Roadmap')}
           imgStyle={({width: '75%'})}
         /> 
     },
@@ -38,7 +40,7 @@ function Home() {
             candidato ideal para a vaga!"
           imgSrc={imgCarta}
           imgAlt="Imagem de carta de motivação"
-          onClick=""
+          onClick={() => navigate('/CartaDeMotivacao')}
           imgStyle={({width: '40%'})}
         /> 
     },
@@ -53,7 +55,7 @@ function Home() {
             encaixam para você."
           imgSrc={imgVagas}
           imgAlt="Imagem de vagas"
-          onClick=""
+          onClick={() => navigate('/Vagas')}
           imgStyle={({width: '60%'})}
         /> 
     }

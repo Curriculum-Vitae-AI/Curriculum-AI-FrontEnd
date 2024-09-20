@@ -1,3 +1,4 @@
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import Navbar from './components/Navbar';
 import Home from './pages/Home';
 import Roadmap from './pages/Roadmap';
@@ -8,11 +9,16 @@ import './App.css';
 
 function App() {
   return (
-    <div>
+    <Router>
       <Navbar/>
-      <SobreNos/>
-    </div>
-    
+      <Routes>
+        <Route path="/Curriculum-AI-FrontEnd" element={<Home />} />
+        <Route path="/Roadmap" element={<Roadmap />} />
+        <Route path="/CartaDeMotivacao" element={<CartaDeMotivacao />} />
+        <Route path="/Vagas" element={<Vagas />} />
+        <Route path="/SobreNos" element={<SobreNos />} />
+      </Routes>
+    </Router>
   );
 }
 
