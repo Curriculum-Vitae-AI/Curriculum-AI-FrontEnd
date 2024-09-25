@@ -1,5 +1,3 @@
-import "../styles/pages/Vagas.css";
-
 function Vagas(){
     return(
         <div className="Vagas">
