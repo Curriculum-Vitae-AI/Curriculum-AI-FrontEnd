@@ -1,12 +1,12 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import Card from '../components/Card';
-import imgRoadmap from "../assets/Home/imgRoadmap.svg"
-import imgCarta from "../assets/Home/imgCarta.svg"
-import imgVagas from "../assets/Home/imgVagas.svg"
-import FlechaDireita from '../assets/Home/flechaDireita.svg'
-import FlechaEsquerda from '../assets/Home/flechaEsquerda.svg'
-import "../styles/pages/Home.css";
+import imgRoadmap from "../assets/Home/imgRoadmap.svg";
+import imgCarta from "../assets/Home/imgCarta.svg";
+import imgVagas from "../assets/Home/imgVagas.svg";
+import FlechaDireita from '../assets/Home/flechaDireita.svg';
+import FlechaEsquerda from '../assets/Home/flechaEsquerda.svg';
+import styles from "../styles/pages/Home.module.css";
 
 function Home() {
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -70,16 +70,16 @@ function Home() {
   };
 
   return (
-    <div className="Home">
-      <div className="cardHome">
-        <div className="carousel">
-          <button onClick={prevItem} className="carouselBtn"><img src={FlechaEsquerda} alt='Botão anterior' /></button>
+    <div className={styles.Home}>
+      <div className={styles.cardHome}>
+        <div className={styles.carousel}>
+          <button onClick={prevItem} className={styles.carouselBtn}><img src={FlechaEsquerda} alt='Botão anterior' /></button>
 
-          <div className="carouselItem">
+          <div className={styles.carouselItem}>
             {items[currentIndex].content}
           </div>
 
-          <button onClick={nextItem} className="carouselBtn"> <img src={FlechaDireita} alt='Botão próximo'/> </button>
+          <button onClick={nextItem} className={styles.carouselBtn}> <img src={FlechaDireita} alt='Botão próximo'/> </button>
         </div>
       </div>
     </div>

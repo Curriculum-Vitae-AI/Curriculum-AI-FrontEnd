@@ -1,15 +1,15 @@
-import "../styles/pages/SobreNos.css";
+import styles from "../styles/pages/SobreNos.module.css";
 
 function SobreNos() {
     return (
-        <div className="sobreNos">
-            <div className="cardSobreNosPrincipal">
-                <div className="tituloSobreNos">
+        <div className={styles.sobreNos}>
+            <div className={styles.cardSobreNosPrincipal}>
+                <div className={styles.tituloSobreNos}>
                     <h1>
                         Conquiste seu futuro profissional: o caminho, a motivação e a oportunidade em um só lugar.
                     </h1>
                 </div>
-                <div className="cardSobreNosSegundario">
+                <div className={styles.cardSobreNosSegundario}>
                     <p>
                         Em um mundo cada vez mais conectado, a tecnologia está presente em todos os aspectos da
                         nossa vida. No Curriculum AI, acreditamos que a tecnologia pode auxiliar no nosso desempenho,

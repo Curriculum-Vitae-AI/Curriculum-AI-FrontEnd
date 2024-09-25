@@ -1,5 +1,3 @@
-import "../styles/pages/CartaDeMotivacao.css";
-
 function CartaDeMotivacao(){
     return(
         <div className="CartaDeMotivacao">
@@ -14,7 +12,7 @@ function CartaDeMotivacao(){
                 </div>
                 <div>
                     <h1>Experiência</h1>
-                    <textarea placeholder="Escreva sua experiência"></textarea>
+                    <textarea id='' placeholder="Escreva sua experiência"></textarea>
                 </div>
                 
             </div>
