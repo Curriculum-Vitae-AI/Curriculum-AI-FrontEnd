@@ -44,16 +44,31 @@ textarea {
 }
 
 .btnVoltar {
-  border: 0.5px solid rgba(0, 92, 165, 1);
   font-weight: bolder;
+  border: 0.5px solid rgba(0, 92, 165, 1);
   border-radius: 5px;
   color: rgba(0, 92, 165, 1);
   padding: 15px 35px;
+  transition: background-color 0.5s ease, color 0.5s ease;
+}
+
+.btnVoltar:hover {
+  background-color: rgba(0, 92, 165, 1);
+  color: white;
+  outline: 1px solid white;
 }
 
 .btnDownload {
+  font-weight: bolder;
   border-radius: 5px;
   background-color: rgba(0, 92, 165, 1);
   color: white;
   padding: 15px 35px;
+  transition: background-color 0.5s ease, color 0.5s ease;
+}
+
+.btnDownload:hover {
+  background-color: white;
+  color: rgba(0, 92, 165, 1);
+  outline: 1px solid rgba(0, 92, 165, 1);
 }
