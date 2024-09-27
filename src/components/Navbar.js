@@ -8,8 +8,8 @@ function Navbar(){
 
     return(
         <div className={styles.Navbar}>
-            <button className={styles.Logo}> 
-            <Link to="/Curriculum-AI-FrontEnd"><img src={Logo} alt="Logo"/></Link>
+            <button className={styles.btnLogo}> 
+            <Link to="/Curriculum-AI-FrontEnd"><img className={styles.Logo} src={Logo} alt="Logo"/></Link>
             </button>
             <div className={styles.Botoes}>
             <button className={`${styles.btn} ${location.pathname === '/Roadmap' ? styles.active : ''}`}>

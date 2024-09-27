@@ -1,10 +1,11 @@
 .card {
     display: flex;
-    width: 900px;
+    width: 100%;
+    max-width: 900px;
 }
 
 .esquerda {
-    width: 450px;
+    max-width: 520px;
     height: 400px;
     display: flex;
     flex-direction: column;
@@ -20,6 +21,7 @@
     text-align: justify;
     width: 420px;
     font-size: 25px;
+    padding: 0 25px;
 }
 
 .btnGerar {
@@ -41,9 +43,57 @@
 }
 
 .direita {
-    width: 450px;
+    width: 350px;
     display: flex; 
     flex-direction: column; 
     justify-content: center;
     align-items: center;
+}
+
+@media(max-width: 1430px){
+    .titulo{
+        font-size: 28px;
+    }
+    
+    .texto {
+        text-align: justify;
+        width: 80%;
+        max-width: 400px;
+        font-size: 20px;
+    }
+    .card{
+        display: flex;
+        justify-content: center;
+    }
+    .esquerda {
+        width: 80%;
+        max-width: 425px;
+    }
+    
+    .direita {
+        width: 80%;
+        max-width: 425px;
+    }
+}
+
+@media (max-width: 1132px){
+    .direita {
+        width: 60%;
+        max-width: 400px;
+    }
+
+    .esquerda {
+        width: 80%;
+        max-width: 450px;
+    }
+}
+
+@media (max-width: 1132px){
+    .titulo{
+        font-size: 25px;
+    }
+
+    .texto{
+        font-size: 18px;
+    }
 }
