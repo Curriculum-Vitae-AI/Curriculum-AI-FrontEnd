@@ -1,3 +1,5 @@
+import { Link } from 'react-router-dom';
+
 function Vagas(){
     return(
         <div className="Vagas">
@@ -21,7 +23,7 @@ function Vagas(){
                 
             </div>
             <div className="botoes">
-                <button className="btnVoltar">VOLTAR</button>
+                <Link to="/Curriculum-AI-FrontEnd"><button className="btnVoltar">VOLTAR</button></Link>
                 <button className="btnDownload">BUSCAR</button>
             </div>
         </div>
