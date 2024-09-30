@@ -41,3 +41,44 @@ button {
 #link:hover::after, .active::after {
     transform: scaleX(1);
 }
+
+@media (max-width: 1458px){
+    #link, .btn {
+        padding: 10px;
+    }
+}
+
+@media (max-width: 1300px){
+    #link {
+        padding: 0;
+        font-size: 18px;
+    }
+}
+
+@media (max-width: 1161px){
+    .btnLogo{
+        width: 300px;
+    }
+    .Logo{
+        width: 90%;
+    }
+    #link{
+        font-size: 16px;
+    }
+}
+
+@media (max-width: 1058px){
+    .btnLogo{
+        padding: 0;
+        width: 280px;
+    }
+    .Botoes {
+        gap: 10px;
+    }
+}
+
+@media (max-width: 1008px){
+    .Botoes {
+        gap: 0px;
+    }
+}

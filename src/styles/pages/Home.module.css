@@ -29,11 +29,40 @@
     justify-content: center;
     align-items: center;
     font-size: 24px;
-    margin: 0 10px;
+    margin: 0;
 }
   
 .carouselBtn {
     border: none;
-    padding: 10px;
     cursor: pointer;
+    padding: 20px;
+}
+
+@media (max-width: 1430px){
+    .Home {
+        padding: 3rem 3.5rem;
+    }
+
+    .cardHome{
+        padding: 1.5rem;
+    }
+
+    .carouselItem{
+        width: 100%;
+    }
+}
+
+@media (max-width: 1300px){
+    .btnFlecha{
+        width: 50px;
+    }
+}
+
+@media (max-width: 1188px){
+    .btnFlecha{
+        width: 48px;
+    }
+    .carouselBtn {
+        padding: 10px;
+    }
 }
