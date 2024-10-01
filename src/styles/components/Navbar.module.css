@@ -12,6 +12,14 @@ button {
     cursor: pointer;
 }
 
+.iconFechado{
+    display: none;
+}
+
+.iconAberto{
+    display: none;
+}
+
 .Botoes {
     display: flex;
     gap: 20px;
@@ -56,9 +64,7 @@ button {
 }
 
 @media (max-width: 1161px){
-    .btnLogo{
-        width: 300px;
-    }
+
     .Logo{
         width: 90%;
     }
@@ -68,17 +74,45 @@ button {
 }
 
 @media (max-width: 1058px){
-    .btnLogo{
-        padding: 0;
-        width: 280px;
-    }
     .Botoes {
         gap: 10px;
     }
 }
 
 @media (max-width: 1008px){
+    .btn{
+        display: none;
+    }
+}
+
+@media (max-width: 1008px){
     .Botoes {
         gap: 0px;
+    }
+
+    .iconFechado{
+        display: flex;
+    }
+
+    .Botoes.responsive {
+        position: fixed;
+        top: 0;
+        left: 0;
+        z-index: 99px;
+        height: 100%;
+        flex-direction: column;
+        background-color: rgb(255, 255, 255);
+        padding-top: 30px;
+        border-right: 1px solid rgb(241, 231, 210);
+        padding-left: 20px;
+    }
+
+    .Botoes.responsive .btn{
+        display: flex;
+        padding-block: 20px;
+    }
+
+    .Botoes.responsive .Logo{
+        padding-block: 20px;
     }
 }
