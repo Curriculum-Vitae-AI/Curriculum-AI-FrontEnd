@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/Curriculum-AI-FrontEnd/static/css/main.121cdadb.css",
-    "main.js": "/Curriculum-AI-FrontEnd/static/js/main.cd3e9b67.js",
+    "main.css": "/Curriculum-AI-FrontEnd/static/css/main.6a7b2c22.css",
+    "main.js": "/Curriculum-AI-FrontEnd/static/js/main.2a48ab9a.js",
     "static/media/imgRoadmap.svg": "/Curriculum-AI-FrontEnd/static/media/imgRoadmap.de296ec7a0aa350f3849749a77ebb5b3.svg",
     "static/media/Logo.svg": "/Curriculum-AI-FrontEnd/static/media/Logo.e7196783a85974b55bb95a34c4d38158.svg",
     "static/media/imgCarta.svg": "/Curriculum-AI-FrontEnd/static/media/imgCarta.c04080c8f3f9a46d8072a19cfdce3a93.svg",
@@ -9,11 +9,11 @@
     "static/media/flechaEsquerda.svg": "/Curriculum-AI-FrontEnd/static/media/flechaEsquerda.64143e08447ea3d99792d55a3e9d3f51.svg",
     "static/media/flechaDireita.svg": "/Curriculum-AI-FrontEnd/static/media/flechaDireita.2efd7c923db714e0b0fc354326431abf.svg",
     "index.html": "/Curriculum-AI-FrontEnd/index.html",
-    "main.121cdadb.css.map": "/Curriculum-AI-FrontEnd/static/css/main.121cdadb.css.map",
-    "main.cd3e9b67.js.map": "/Curriculum-AI-FrontEnd/static/js/main.cd3e9b67.js.map"
+    "main.6a7b2c22.css.map": "/Curriculum-AI-FrontEnd/static/css/main.6a7b2c22.css.map",
+    "main.2a48ab9a.js.map": "/Curriculum-AI-FrontEnd/static/js/main.2a48ab9a.js.map"
   },
   "entrypoints": [
-    "static/css/main.121cdadb.css",
-    "static/js/main.cd3e9b67.js"
+    "static/css/main.6a7b2c22.css",
+    "static/js/main.2a48ab9a.js"
   ]
 }
