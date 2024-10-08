@@ -97,3 +97,30 @@
         font-size: 18px;
     }
 }
+
+@media (max-width: 1008px){
+    .card{
+        display: flex;
+        flex-direction: column;
+        justify-items: center;
+        align-items: center;
+        width: 100%;
+    }
+
+    .esquerda{
+        justify-content: flex-start;
+        width: 100%;
+        height: 100%;
+        padding-bottom: 20px;
+    }
+
+    .direita{
+        width:100%;;
+    }
+
+    .img{
+        display: flex;
+        justify-items: center;
+        align-items: center;
+    }
+}
