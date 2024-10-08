@@ -1,3 +1,5 @@
+import { Link } from 'react-router-dom';
+
 function CartaDeMotivacao(){
     return(
         <div className="CartaDeMotivacao">
@@ -17,7 +19,7 @@ function CartaDeMotivacao(){
                 
             </div>
             <div className="botoes">
-                <button className="btnVoltar">VOLTAR</button>
+                <Link to="/Curriculum-AI-FrontEnd"><button className="btnVoltar">VOLTAR</button></Link>
                 <button className="btnDownload">DOWNLOAD</button>
             </div>
         </div>

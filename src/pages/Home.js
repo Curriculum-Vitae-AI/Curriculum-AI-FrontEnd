@@ -25,7 +25,7 @@ function Home() {
           imgSrc={imgRoadmap}
           imgAlt="Imagem de roadmap"
           onClick={() => navigate('/Roadmap')}
-          imgStyle={({width: '75%'})}
+          imgStyle={({width: '85%'})}
         /> 
     },
     { 
@@ -73,13 +73,13 @@ function Home() {
     <div className={styles.Home}>
       <div className={styles.cardHome}>
         <div className={styles.carousel}>
-          <button onClick={prevItem} className={styles.carouselBtn}><img src={FlechaEsquerda} alt='Botão anterior' /></button>
+          <button onClick={prevItem} className={styles.carouselBtn}><img className={styles.btnFlecha} src={FlechaEsquerda} alt='Botão anterior' /></button>
 
           <div className={styles.carouselItem}>
             {items[currentIndex].content}
           </div>
 
-          <button onClick={nextItem} className={styles.carouselBtn}> <img src={FlechaDireita} alt='Botão próximo'/> </button>
+          <button onClick={nextItem} className={styles.carouselBtn}> <img className={styles.btnFlecha} src={FlechaDireita} alt='Botão próximo'/> </button>
         </div>
       </div>
     </div>
