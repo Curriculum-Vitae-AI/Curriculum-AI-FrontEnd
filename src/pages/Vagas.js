@@ -15,12 +15,7 @@ function Vagas(){
                 <div>
                     <h1>Senioridade da vaga</h1>
                     <input placeholder="Júnior, Pleno, Sênior e  etc..."/>
-                </div>
-                <div>
-                    <h1>Informações adicionais</h1>
-                    <textarea placeholder="Informações adicionais tais como foco em Lavarel, Spring Boot, PySpark  e etc..."></textarea>
-                </div>
-                
+                </div>                
             </div>
             <div className="botoes">
                 <Link to="/Curriculum-AI-FrontEnd"><button className="btnVoltar">VOLTAR</button></Link>
