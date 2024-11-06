@@ -1,6 +1,17 @@
+import { useState } from 'react';
 import { Link } from 'react-router-dom';
 
 function Vagas(){
+    const [loading, setLoading] = useState(false);
+
+    const handleDownloadClick = () => {
+        setLoading(true);
+
+        setTimeout(() => {
+        setLoading(false);
+        }, 2000);
+    };
+
     return(
         <div className="Vagas">
             <div>
@@ -19,7 +30,16 @@ function Vagas(){
             </div>
             <div className="botoes">
                 <Link to="/Curriculum-AI-FrontEnd"><button className="btnVoltar">VOLTAR</button></Link>
-                <button className="btnDownload">BUSCAR</button>
+                <button 
+                    className={loading ? "btnLoading" : "btnDownload"}
+                    onClick={handleDownloadClick}
+                >
+                {loading ? (
+                    <span className="loader"></span>
+                ) : (
+                    'BUSCAR'
+                )}
+                </button>
             </div>
         </div>
     );
