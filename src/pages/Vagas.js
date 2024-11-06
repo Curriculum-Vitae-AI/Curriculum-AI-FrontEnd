@@ -1,46 +1,103 @@
 import { useState } from 'react';
 import { Link } from 'react-router-dom';
 
-function Vagas(){
+import { listVacancy } from '../services/VacancyService.js';
+
+function Vagas() {
+
+    const [role, setRole] = useState('');
+    const [locality, setLocality] = useState('');
+    const [seniority, setSeniority] = useState('');
+
+    const [jobLinks, setJobLinks] = useState([]);
+
     const [loading, setLoading] = useState(false);
 
-    const handleDownloadClick = () => {
+    const handleSubmit = async (e) => {
+        e.preventDefault();
         setLoading(true);
-
-        setTimeout(() => {
-        setLoading(false);
-        }, 2000);
+        setJobLinks([]);
+        
+        const request = {
+            role: role,
+            locality: locality,
+            seniority: seniority
+        };
+        try {
+            const jobs = await listVacancy(request);
+            setJobLinks(jobs);
+            cleanFields();
+        } catch (exception) {
+            console.log(exception);
+        } finally {
+            setLoading(false);
+        }
     };
 
-    return(
+    const cleanFields = () => {
+        setRole('');
+        setLocality('');
+        setSeniority('');
+      }
+
+    return (
         <div className="Vagas">
-            <div>
+            <form onSubmit={handleSubmit}>
                 <div>
-                    <h1>Cargo desejado</h1>
-                    <input placeholder="Informe o nome do cargo desejado para realizar a busca"/>
+                    <div>
+                        <h1>Cargo desejado</h1>
+                        <input
+                            placeholder="Informe o nome do cargo desejado para realizar a busca"
+                            required
+                            value={role}
+                            onChange={(e) => setRole(e.target.value)}
+                        />
+                    </div>
+                    <div>
+                        <h1>Localidade</h1>
+                        <input
+                            placeholder="Informe o local da vaga, ou digite 'remoto' para buscar vagas em todo o país"
+                            required
+                            value={locality}
+                            onChange={(e) => setLocality(e.target.value)}
+                        />
+                    </div>
+                    <div>
+                        <h1>Senioridade da vaga</h1>
+                        <input
+                            placeholder="Júnior, Pleno, Sênior e  etc..."
+                            required
+                            value={seniority}
+                            onChange={(e) => setSeniority(e.target.value)}
+                        />
+                    </div>
+                    {jobLinks.length > 0 ? (
+                        <div>
+                            <h1>Links gerados:</h1>
+                            <ul>
+                                {jobLinks.map((link, index) => (
+                                    <li key={index}>
+                                        <a href={link} target="_blank" rel="noopener noreferrer">{link}</a>
+                                    </li>
+                                ))}
+                            </ul>
+                        </div>
+                    ) : undefined }
                 </div>
-                <div>
-                    <h1>Localidade</h1>
-                    <input placeholder="Informe o local da vaga, ou digite 'remoto' para buscar vagas em todo o país"/>
+                <div className="botoes">
+                    <Link to="/Curriculum-AI-FrontEnd"><button className="btnVoltar">VOLTAR</button></Link>
+                    <button
+                        className={loading ? "btnLoading" : "btnDownload"}
+                        type="submit"
+                    >
+                        {loading ? (
+                            <span className="loader"></span>
+                        ) : (
+                            'BUSCAR'
+                        )}
+                    </button>
                 </div>
-                <div>
-                    <h1>Senioridade da vaga</h1>
-                    <input placeholder="Júnior, Pleno, Sênior e  etc..."/>
-                </div>                
-            </div>
-            <div className="botoes">
-                <Link to="/Curriculum-AI-FrontEnd"><button className="btnVoltar">VOLTAR</button></Link>
-                <button 
-                    className={loading ? "btnLoading" : "btnDownload"}
-                    onClick={handleDownloadClick}
-                >
-                {loading ? (
-                    <span className="loader"></span>
-                ) : (
-                    'BUSCAR'
-                )}
-                </button>
-            </div>
+            </form>
         </div>
     );
 }
