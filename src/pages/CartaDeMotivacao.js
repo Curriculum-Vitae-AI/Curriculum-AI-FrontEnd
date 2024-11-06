@@ -7,12 +7,15 @@ import { getMotivationLetter } from '../services/MotivationLetterService.js';
 
 function CartaDeMotivacao() {
 
+    const [loading, setLoading] = useState(false);
+
     const [company, setCompany] = useState('');
     const [role, setRole] = useState('');
     const [experience, setExperience] = useState('');
 
     const handleSubmit = async (e) => {
         e.preventDefault();
+        setLoading(true);
         const request = {
             company: company,
             role: role,
@@ -25,6 +28,8 @@ function CartaDeMotivacao() {
             cleanFields();
         } catch (exception) {
             console.log(exception);
+        } finally {
+            setLoading(false);
         }
     }
 
@@ -67,11 +72,19 @@ function CartaDeMotivacao() {
                     </div>
                     <div className="botoes">
                         <Link to="/Curriculum-AI-FrontEnd"><button className="btnVoltar">VOLTAR</button></Link>
-                        <button className="btnDownload" type="submit">DOWNLOAD</button>
+                        <button
+                            className={loading ? "btnLoading" : "btnDownload"}
+                            type="submit">
+                            {loading ? (
+                                <span className="loader"></span>
+                            ) : (
+                                'DOWNLOAD'
+                            )}
+                        </button>
                     </div>
                 </form>
             </div>
-        </div >
+        </div>
     );
 }
 
