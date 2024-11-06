@@ -1,6 +1,5 @@
 import { useState } from 'react';
 import { Link } from 'react-router-dom';
-import { showToastSuccess, showToastError } from '../components/toastService';
 
 function Roadmap() {
   const [loading, setLoading] = useState(false);
@@ -8,17 +7,9 @@ function Roadmap() {
   const handleDownloadClick = () => {
     setLoading(true);
 
-    //setTimeout(() => {
-      //setLoading(false);
-    //}, 2000);
-  };
-
-  const handleSuccessClick = () => {
-    showToastSuccess("Operação realizada com sucesso!");
-  };
-
-  const handleErrorClick = () => {
-    showToastError("Ocorreu um erro!");
+    setTimeout(() => {
+      setLoading(false);
+    }, 2000);
   };
 
   return (
@@ -42,8 +33,6 @@ function Roadmap() {
           )}
         </button>
       </div>
-      <button onClick={handleSuccessClick}>Mostrar Sucesso</button>
-      <button onClick={handleErrorClick}>Mostrar Erro</button>
     </div>
   );
 }
