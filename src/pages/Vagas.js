@@ -2,6 +2,7 @@ import { useState } from 'react';
 import { Link } from 'react-router-dom';
 
 import { listVacancy } from '../services/VacancyService.js';
+import { showToastSuccess, showToastError } from '../components/Toaster.js';
 
 function Vagas() {
 
@@ -26,9 +27,10 @@ function Vagas() {
         try {
             const jobs = await listVacancy(request);
             setJobLinks(jobs);
+            showToastSuccess('Vagas encontradas com sucesso!');
             cleanFields();
         } catch (exception) {
-            console.log(exception);
+            showToastError(exception.response.data.error);
         } finally {
             setLoading(false);
         }
@@ -45,30 +47,33 @@ function Vagas() {
             <form onSubmit={handleSubmit}>
                 <div>
                     <div>
-                        <h1>Cargo desejado</h1>
+                        <h1>Cargo desejado *</h1>
                         <input
                             placeholder="Informe o nome do cargo desejado para realizar a busca"
                             required
                             value={role}
                             onChange={(e) => setRole(e.target.value)}
+                            maxLength={30}
                         />
                     </div>
                     <div>
-                        <h1>Localidade</h1>
+                        <h1>Localidade *</h1>
                         <input
                             placeholder="Informe o local da vaga, ou digite 'remoto' para buscar vagas em todo o país"
                             required
                             value={locality}
                             onChange={(e) => setLocality(e.target.value)}
+                            maxLength={30}
                         />
                     </div>
                     <div>
-                        <h1>Senioridade da vaga</h1>
+                        <h1>Senioridade da vaga *</h1>
                         <input
                             placeholder="Júnior, Pleno, Sênior e  etc..."
                             required
                             value={seniority}
                             onChange={(e) => setSeniority(e.target.value)}
+                            maxLength={15}
                         />
                     </div>
                     {jobLinks.length > 0 ? (
