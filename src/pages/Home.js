@@ -24,7 +24,7 @@ function Home() {
             que você possa focar somente no aprendizado."
           imgSrc={imgRoadmap}
           imgAlt="Imagem de roadmap"
-          onClick={() => navigate('/Roadmap')}
+          onClick={() => navigate('/roadmap')}
           imgStyle={({width: '85%'})}
         /> 
     },
@@ -40,7 +40,7 @@ function Home() {
             candidato ideal para a vaga!"
           imgSrc={imgCarta}
           imgAlt="Imagem de carta de motivação"
-          onClick={() => navigate('/CartaDeMotivacao')}
+          onClick={() => navigate('/motivacao')}
           imgStyle={({width: '40%'})}
         /> 
     },
@@ -55,7 +55,7 @@ function Home() {
             encaixam para você."
           imgSrc={imgVagas}
           imgAlt="Imagem de vagas"
-          onClick={() => navigate('/Vagas')}
+          onClick={() => navigate('/vagas')}
           imgStyle={({width: '60%'})}
         /> 
     }

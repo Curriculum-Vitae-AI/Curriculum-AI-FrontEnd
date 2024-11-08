@@ -20,19 +20,19 @@ function Navbar(){
                 <button id={styles.iconFechado} className={styles.icon} onClick={toggleResponsive}> <img src={MenuFechado} className={styles.iconFechado} alt="menu fechado"/> </button>
                 <button id={styles.iconAberto} className={styles.icon}  onClick={toggleResponsive}> <img src={MenuAberto} className={styles.iconAberto} alt="menu aberto"/> </button>
         
-                <Link to="/Curriculum-AI-FrontEnd"><img className={styles.Logo} src={Logo} alt="Logo"/></Link>
+                <Link to="/"><img className={styles.Logo} src={Logo} alt="Logo"/></Link>
                 
-                <button className={`${styles.btn} ${location.pathname === '/Roadmap' ? styles.active : ''}`}>
-                    <Link id={styles.link} to="/Roadmap">ROADMAP</Link>
+                <button className={`${styles.btn} ${location.pathname === '/roadmap' ? styles.active : ''}`}>
+                    <Link id={styles.link} to="/roadmap">ROADMAP</Link>
                 </button>
-                <button className={`${styles.btn} ${location.pathname === '/CartaDeMotivacao' ? styles.active : ''}`}>
-                    <Link id={styles.link} to="/CartaDeMotivacao">CARTA DE MOTIVAÇÃO</Link>
+                <button className={`${styles.btn} ${location.pathname === '/motivacao' ? styles.active : ''}`}>
+                    <Link id={styles.link} to="/motivacao">CARTA DE MOTIVAÇÃO</Link>
                 </button>
-                <button className={`${styles.btn} ${location.pathname === '/Vagas' ? styles.active : ''}`}>
-                    <Link id={styles.link} to="/Vagas">VAGAS</Link> 
+                <button className={`${styles.btn} ${location.pathname === '/vagas' ? styles.active : ''}`}>
+                    <Link id={styles.link} to="/vagas">VAGAS</Link> 
                 </button>
-                <button className={`${styles.btn} ${location.pathname === '/SobreNos' ? styles.active : ''}`}>
-                    <Link id={styles.link} to="/SobreNos">SOBRE NÓS</Link> 
+                <button className={`${styles.btn} ${location.pathname === '/sobre' ? styles.active : ''}`}>
+                    <Link id={styles.link} to="/sobre">SOBRE NÓS</Link> 
                 </button>
             </div>
         </div>
