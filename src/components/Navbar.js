@@ -6,33 +6,37 @@ import { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { useLocation } from 'react-router-dom';
 
-function Navbar(){
+function Navbar() {
     const location = useLocation();
     const [isResponsive, setIsResponsive] = useState(false);
 
     const toggleResponsive = () => {
         setIsResponsive(!isResponsive);
-      };
+    };
 
-    return(
+    return (
         <div className={styles.Navbar}>
-            <div className={`${styles.Botoes} ${isResponsive ? styles.responsive : ''}`}>   
-                <button id={styles.iconFechado} className={styles.icon} onClick={toggleResponsive}> <img src={MenuFechado} className={styles.iconFechado} alt="menu fechado"/> </button>
-                <button id={styles.iconAberto} className={styles.icon}  onClick={toggleResponsive}> <img src={MenuAberto} className={styles.iconAberto} alt="menu aberto"/> </button>
-        
-                <Link to="/"><img className={styles.Logo} src={Logo} alt="Logo"/></Link>
-                
+            <div className={`${styles.Botoes} ${isResponsive ? styles.responsive : ''}`}>
+                <button id={styles.iconFechado} className={styles.icon} onClick={toggleResponsive}>
+                    <img src={MenuFechado} className={styles.iconFechado} alt="menu fechado" />
+                </button>
+                <button id={styles.iconAberto} className={styles.icon} onClick={toggleResponsive}>
+                    <img src={MenuAberto} className={styles.iconAberto} alt="menu aberto" />
+                </button>
+
+                <Link to="/"><img className={styles.Logo} src={Logo} alt="Logo" /></Link>
+
                 <button className={`${styles.btn} ${location.pathname === '/roadmap' ? styles.active : ''}`}>
-                    <Link id={styles.link} to="/roadmap">ROADMAP</Link>
+                    <Link to="/roadmap">ROADMAP</Link>
                 </button>
                 <button className={`${styles.btn} ${location.pathname === '/motivacao' ? styles.active : ''}`}>
-                    <Link id={styles.link} to="/motivacao">CARTA DE MOTIVAÇÃO</Link>
+                    <Link to="/motivacao">CARTA DE MOTIVAÇÃO</Link>
                 </button>
                 <button className={`${styles.btn} ${location.pathname === '/vagas' ? styles.active : ''}`}>
-                    <Link id={styles.link} to="/vagas">VAGAS</Link> 
+                    <Link to="/vagas">VAGAS</Link>
                 </button>
                 <button className={`${styles.btn} ${location.pathname === '/sobre' ? styles.active : ''}`}>
-                    <Link id={styles.link} to="/sobre">SOBRE NÓS</Link> 
+                    <Link to="/sobre">SOBRE NÓS</Link>
                 </button>
             </div>
         </div>

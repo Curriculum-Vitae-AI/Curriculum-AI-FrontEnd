@@ -4,7 +4,7 @@ import { format } from 'date-fns';
 
 import { downloadPdf } from '../utils/PdfUtils.js';
 import { getMotivationLetter } from '../services/MotivationLetterService.js';
-import { showToastSuccess, showToastError } from '../components/Toaster.js';
+import { showToastSuccess, showToastError, showToastGenericError } from '../components/Toaster.js';
 
 function CartaDeMotivacao() {
 
@@ -29,8 +29,13 @@ function CartaDeMotivacao() {
             showToastSuccess('Carta de motivação gerada com sucesso!');
             cleanFields();
         } catch (exception) {
-            const error = JSON.parse(await exception.response.data.text());
-            showToastError(error.error)
+            const errorData = await exception?.response?.data?.text();
+            if (errorData) {
+                const error = JSON.parse();
+                showToastError(error.error);
+            } else {
+                showToastGenericError()
+            }
         } finally {
             setLoading(false);
         }

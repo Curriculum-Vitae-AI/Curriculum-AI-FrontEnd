@@ -50,7 +50,7 @@ function Home() {
         <Card 
           title="VAGAS"
           text="
-            Utilizando conexão com o Chat GPT você pode informar a área que você quer 
+            Utilizando conexão com o Gemini você pode informar a área que você quer 
             trabalhar, sua experiência e ele indicará para você as melhores vagas que se 
             encaixam para você."
           imgSrc={imgVagas}

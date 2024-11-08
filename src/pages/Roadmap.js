@@ -4,7 +4,7 @@ import { format } from 'date-fns';
 
 import { downloadPdf } from '../utils/PdfUtils.js';
 import { getRoadMap } from '../services/RoadMapService.js'
-import { showToastSuccess, showToastError } from '../components/Toaster.js';
+import { showToastSuccess, showToastError, showToastGenericError } from '../components/Toaster.js';
 
 function Roadmap() {
 
@@ -25,8 +25,12 @@ function Roadmap() {
       showToastSuccess('RoadMap gerado com sucesso!');
       cleanFields();
     } catch (exception) {
-      const error = JSON.parse(await exception.response.data.text());
-      showToastError(error.error)
+      const errorData = await exception?.response?.data?.text();
+      if (errorData) {
+        showToastError(errorData.error);
+      } else {
+        showToastGenericError();
+      }
     } finally {
       setLoading(false);
     }
