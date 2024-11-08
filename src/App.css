@@ -19,6 +19,12 @@ body {
   color: rgba(0, 92, 165, 1);
 }
 
+.Roadmap,
+.CartaDeMotivacao,
+.Vagas li{
+  font-size: x-large;
+}
+
 input {
   width: 100%;
   font-size: 18px;

@@ -18,7 +18,7 @@ function Vagas() {
         e.preventDefault();
         setLoading(true);
         setJobLinks([]);
-        
+
         const request = {
             role: role,
             locality: locality,
@@ -40,7 +40,17 @@ function Vagas() {
         setRole('');
         setLocality('');
         setSeniority('');
-      }
+    }
+
+    const transformLink = (link) => {
+        const match = link.match(/www\.(.*?)\.com/);
+        if (match) {
+            const siteName = match[1];
+            const capitalizedSiteName = siteName.charAt(0).toUpperCase() + siteName.slice(1);
+            return capitalizedSiteName;
+        }
+        return link;
+    };
 
     return (
         <div className="Vagas">
@@ -82,12 +92,14 @@ function Vagas() {
                             <ul>
                                 {jobLinks.map((link, index) => (
                                     <li key={index}>
-                                        <a href={link} target="_blank" rel="noopener noreferrer">{link}</a>
+                                        <a href={link} target="_blank" rel="noopener noreferrer">
+                                            {transformLink(link)}
+                                        </a>
                                     </li>
                                 ))}
                             </ul>
                         </div>
-                    ) : undefined }
+                    ) : undefined}
                 </div>
                 <div className="botoes">
                     <Link to="/"><button className="btnVoltar">VOLTAR</button></Link>
