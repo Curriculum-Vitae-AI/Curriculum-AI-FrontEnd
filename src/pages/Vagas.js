@@ -2,7 +2,7 @@ import { useState } from 'react';
 import { Link } from 'react-router-dom';
 
 import { listVacancy } from '../services/VacancyService.js';
-import { showToastSuccess, showToastError } from '../components/Toaster.js';
+import { showToastSuccess, showToastError, showToastGenericError } from '../components/Toaster.js';
 
 function Vagas() {
 
@@ -30,7 +30,11 @@ function Vagas() {
             showToastSuccess('Vagas encontradas com sucesso!');
             cleanFields();
         } catch (exception) {
-            showToastError(exception.response.data.error);
+            if (exception?.response?.data?.error) {
+                showToastError(exception.response.data.error);
+            } else {
+                showToastGenericError();
+            }
         } finally {
             setLoading(false);
         }
@@ -91,7 +95,7 @@ function Vagas() {
                             <h1>Links gerados:</h1>
                             <ul>
                                 {jobLinks.map((link, index) => (
-                                    <li key={index}>
+                                    <li key={index} className="links">
                                         <a href={link} target="_blank" rel="noopener noreferrer">
                                             {transformLink(link)}
                                         </a>
