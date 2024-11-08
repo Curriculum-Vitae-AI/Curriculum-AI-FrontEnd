@@ -46,7 +46,7 @@ function Roadmap() {
           />
         </div>
         <div className="botoes">
-          <Link to="/Curriculum-AI-FrontEnd">
+          <Link to="/">
             <button className="btnVoltar">VOLTAR</button>
           </Link>
           <button

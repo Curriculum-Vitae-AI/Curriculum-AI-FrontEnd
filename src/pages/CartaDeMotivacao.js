@@ -71,7 +71,7 @@ function CartaDeMotivacao() {
                         />
                     </div>
                     <div className="botoes">
-                        <Link to="/Curriculum-AI-FrontEnd"><button className="btnVoltar">VOLTAR</button></Link>
+                        <Link to="/"><button className="btnVoltar">VOLTAR</button></Link>
                         <button
                             className={loading ? "btnLoading" : "btnDownload"}
                             type="submit">

@@ -14,11 +14,11 @@ function App() {
     <Router>
       <Navbar/>
       <Routes>
-        <Route path="/Curriculum-AI-FrontEnd" element={<Home />} />
-        <Route path="/Roadmap" element={<Roadmap />} />
-        <Route path="/CartaDeMotivacao" element={<CartaDeMotivacao />} />
-        <Route path="/Vagas" element={<Vagas />} />
-        <Route path="/SobreNos" element={<SobreNos />} />
+        <Route path="/" element={<Home />} />
+        <Route path="/roadmap" element={<Roadmap />} />
+        <Route path="/motivacao" element={<CartaDeMotivacao />} />
+        <Route path="/vagas" element={<Vagas />} />
+        <Route path="/sobre" element={<SobreNos />} />
       </Routes>
       <ToastContainer />
     </Router>
