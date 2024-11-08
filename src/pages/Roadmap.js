@@ -4,6 +4,7 @@ import { format } from 'date-fns';
 
 import { downloadPdf } from '../utils/PdfUtils.js';
 import { getRoadMap } from '../services/RoadMapService.js'
+import { showToastSuccess, showToastError } from '../components/Toaster.js';
 
 function Roadmap() {
 
@@ -21,9 +22,11 @@ function Roadmap() {
       const pdf = await getRoadMap(request);
       const fileName = `Roadmap_${format(new Date(), 'dd-MM-yyyy_HH-mm')}`;
       downloadPdf(pdf, fileName);
+      showToastSuccess('RoadMap gerado com sucesso!');
       cleanFields();
     } catch (exception) {
-      console.log(exception);
+      const error = JSON.parse(await exception.response.data.text());
+      showToastError(error.error)
     } finally {
       setLoading(false);
     }
@@ -37,12 +40,13 @@ function Roadmap() {
     <div className="Roadmap">
       <form onSubmit={handleSubmit}>
         <div>
-          <h1>Vaga</h1>
+          <h1>Vaga <span>*</span></h1>
           <textarea
             placeholder="Qual vaga quer se candidatar?"
             required
             value={job}
             onChange={(e) => setJob(e.target.value)}
+            maxLength={100}
           />
         </div>
         <div className="botoes">
