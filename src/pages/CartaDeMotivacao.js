@@ -4,6 +4,7 @@ import { format } from 'date-fns';
 
 import { downloadPdf } from '../utils/PdfUtils.js';
 import { getMotivationLetter } from '../services/MotivationLetterService.js';
+import { showToastSuccess, showToastError } from '../components/Toaster.js';
 
 function CartaDeMotivacao() {
 
@@ -25,9 +26,11 @@ function CartaDeMotivacao() {
             const pdf = await getMotivationLetter(request);
             const fileName = `MotivationLetter_${format(new Date(), 'dd-MM-yyyy_HH-mm')}`;
             downloadPdf(pdf, fileName);
+            showToastSuccess('Carta de motivação gerada com sucesso!');
             cleanFields();
         } catch (exception) {
-            console.log(exception);
+            const error = JSON.parse(await exception.response.data.text());
+            showToastError(error.error)
         } finally {
             setLoading(false);
         }
@@ -44,30 +47,33 @@ function CartaDeMotivacao() {
             <div>
                 <form onSubmit={handleSubmit}>
                     <div>
-                        <h1>Nome da empresa</h1>
+                        <h1>Nome da empresa *</h1>
                         <input
                             required
                             placeholder="Qual é o nome da empresa?"
                             value={company}
                             onChange={(e) => setCompany(e.target.value)}
+                            maxLength={30}
                         />
                     </div>
                     <div>
-                        <h1>Cargo desejado</h1>
+                        <h1>Cargo desejado *</h1>
                         <input
                             required
                             placeholder="Qual é a vaga?"
                             value={role}
                             onChange={(e) => setRole(e.target.value)}
+                            maxLength={30}
                         />
                     </div>
                     <div>
-                        <h1>Experiência</h1>
+                        <h1>Experiência *</h1>
                         <textarea
                             required
                             placeholder="Escreva sua experiência"
                             value={experience}
                             onChange={(e) => setExperience(e.target.value)}
+                            maxLength={100}
                         />
                     </div>
                     <div className="botoes">

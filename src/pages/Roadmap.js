@@ -40,7 +40,7 @@ function Roadmap() {
     <div className="Roadmap">
       <form onSubmit={handleSubmit}>
         <div>
-          <h1>Vaga <span>*</span></h1>
+          <h1>Vaga *</h1>
           <textarea
             placeholder="Qual vaga quer se candidatar?"
             required
