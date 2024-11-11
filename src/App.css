@@ -111,6 +111,14 @@ textarea {
   animation: rotation 1s linear infinite;
 }
 
+.btnDownload {
+  cursor: pointer;
+}
+
+.btnVoltar {
+  cursor: pointer
+}
+
 @keyframes rotation {
   0% {
     transform: rotate(0deg);
