@@ -56,6 +56,10 @@ button {
     color: inherit;
 }
 
+.Logo{
+    max-height: 100px;
+}
+
 @media (max-width: 1458px){
     #link, .btn {
         padding: 10px;
@@ -70,9 +74,6 @@ button {
 }
 
 @media (max-width: 1161px){
-    .Logo{
-        width: 90%;
-    }
     #link{
         font-size: 16px;
     }
