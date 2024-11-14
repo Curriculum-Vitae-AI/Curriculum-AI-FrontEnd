@@ -8,7 +8,6 @@ function Vagas() {
 
     const [role, setRole] = useState('');
     const [locality, setLocality] = useState('');
-    const [seniority, setSeniority] = useState('');
 
     const [jobLinks, setJobLinks] = useState([]);
 
@@ -21,8 +20,7 @@ function Vagas() {
 
         const request = {
             role: role,
-            locality: locality,
-            seniority: seniority
+            locality: locality
         };
         try {
             const jobs = await listVacancy(request);
@@ -43,11 +41,16 @@ function Vagas() {
     const cleanFields = () => {
         setRole('');
         setLocality('');
-        setSeniority('');
     }
 
     const transformLink = (link) => {
-        const match = link.match(/www\.(.*?)\.com/);
+        let match = link.match(/www\.(.*?)\.com/);
+        if (match) {
+            const siteName = match[1];
+            const capitalizedSiteName = siteName.charAt(0).toUpperCase() + siteName.slice(1);
+            return capitalizedSiteName;
+        }
+        match = link.match(/https:\/\/(.*?)\.com/);
         if (match) {
             const siteName = match[1];
             const capitalizedSiteName = siteName.charAt(0).toUpperCase() + siteName.slice(1);
@@ -73,21 +76,11 @@ function Vagas() {
                     <div>
                         <h1>Localidade *</h1>
                         <input
-                            placeholder="Informe o local da vaga, ou digite 'remoto' para buscar vagas em todo o país"
+                            placeholder="Informe o local da vaga"
                             required
                             value={locality}
                             onChange={(e) => setLocality(e.target.value)}
                             maxLength={30}
-                        />
-                    </div>
-                    <div>
-                        <h1>Senioridade da vaga *</h1>
-                        <input
-                            placeholder="Júnior, Pleno, Sênior e  etc..."
-                            required
-                            value={seniority}
-                            onChange={(e) => setSeniority(e.target.value)}
-                            maxLength={15}
                         />
                     </div>
                     {jobLinks.length > 0 ? (
