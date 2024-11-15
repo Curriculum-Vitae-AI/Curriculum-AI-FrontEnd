@@ -44,7 +44,6 @@ function SobreNos() {
                     </div>
                 </div>
             </div>
-            
     );
 }
 
