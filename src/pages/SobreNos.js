@@ -6,7 +6,7 @@ function SobreNos() {
             <div className={styles.cardSobreNosPrincipal}>
                 <div className={styles.tituloSobreNos}>
                     <h1>
-                        Conquiste seu futuro profissional: o caminho, a motivação e a oportunidade em um só lugar.
+                        Conquiste seu futuro profissional.
                     </h1>
                 </div>
                 <div className={styles.cardSobreNosSegundario}>
@@ -19,6 +19,15 @@ function SobreNos() {
                         ingressar no mercado de trabalho, um profissional em busca de novas oportunidades de carreira,
                         aqui você encontrará tudo o que precisa para estar sempre com todo conhecimento em dia.
                     </p>
+                </div>
+            </div>
+            <div className={styles.cardSobreNosPrincipal}>
+                <div className={styles.tituloSobreNos}>
+                    <h1>
+                        O caminho, a motivação e a oportunidade em um só lugar.
+                    </h1>
+                </div>
+                <div className={styles.cardSobreNosSegundario}>
                     <p>
                         Nosso objetivo é:
                     </p>
