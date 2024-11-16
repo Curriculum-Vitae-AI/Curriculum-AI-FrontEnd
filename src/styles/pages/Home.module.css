@@ -38,6 +38,36 @@
     padding: 20px;
 }
 
+
+.btnFlecha{
+    border-color: white;
+    border-style: solid;
+    border-radius: 50%;
+    border-width: 0.1rem;
+    -webkit-transition: all .3s ease-in-out;
+    -moz-transition: all .3s ease-in-out;
+    transition: all .3s ease-in-out;
+    background-size: cover;
+    width: 3rem;
+    height: 3rem;
+}
+
+.btnFlecha#first{
+    background: url('../../assets/Home/flechaEsquerda.svg') center center no-repeat;
+}
+
+.btnFlecha#second{
+    background: url('../../assets/Home/flechaDireita.svg') center center no-repeat;
+}
+
+.btnFlecha#first:hover{
+    background-image: url('../../assets/Home/flechaEsquerdaHover.svg');
+}
+
+.btnFlecha#second:hover{
+    background-image: url('../../assets/Home/flechaDireitaHover.svg');
+}
+
 @media (max-width: 1430px){
     .Home {
         padding: 3rem 3.5rem;
@@ -52,15 +82,10 @@
     }
 }
 
-@media (max-width: 1300px){
-    .btnFlecha{
-        width: 50px;
-    }
-}
-
 @media (max-width: 1188px){
     .btnFlecha{
-        width: 48px;
+        width: 2.5rem;
+        height: 2.5rem;
     }
     .carouselBtn {
         padding: 10px;

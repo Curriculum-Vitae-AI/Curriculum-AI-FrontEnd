@@ -73,13 +73,13 @@ function Home() {
     <div className={styles.Home}>
       <div className={styles.cardHome}>
         <div className={styles.carousel}>
-          <button onClick={prevItem} className={styles.carouselBtn}><img className={styles.btnFlecha} src={FlechaEsquerda} alt='Botão anterior' /></button>
+          <button onClick={prevItem} className={styles.carouselBtn}><div className={styles.btnFlecha} id={styles.first} alt='Botão anterior' /></button>
 
           <div className={styles.carouselItem}>
             {items[currentIndex].content}
           </div>
 
-          <button onClick={nextItem} className={styles.carouselBtn}> <img className={styles.btnFlecha} src={FlechaDireita} alt='Botão próximo'/> </button>
+          <button onClick={nextItem} className={styles.carouselBtn}> <div className={styles.btnFlecha} id={styles.second} alt='Botão próximo'/> </button>
         </div>
       </div>
     </div>
