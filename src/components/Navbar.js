@@ -21,16 +21,16 @@ function Navbar() {
 
                 <Link to="/"><img className={styles.Logo} src={Logo} alt="Logo" /></Link>
 
-                <button className={`${styles.btn} ${location.pathname === '/roadmap' ? styles.active : ''}`}>
+                <button className={`${styles.btn} ${location.pathname === '/roadmap' ? styles.active : ''}`} onClick={toggleResponsive}>
                     <Link to="/roadmap">ROADMAP</Link>
                 </button>
-                <button className={`${styles.btn} ${location.pathname === '/motivacao' ? styles.active : ''}`}>
+                <button className={`${styles.btn} ${location.pathname === '/motivacao' ? styles.active : ''}`} onClick={toggleResponsive}>
                     <Link to="/motivacao">CARTA DE MOTIVAÇÃO</Link>
                 </button>
-                <button className={`${styles.btn} ${location.pathname === '/vagas' ? styles.active : ''}`}>
+                <button className={`${styles.btn} ${location.pathname === '/vagas' ? styles.active : ''}`} onClick={toggleResponsive}>
                     <Link to="/vagas">VAGAS</Link>
                 </button>
-                <button className={`${styles.btn} ${location.pathname === '/sobre' ? styles.active : ''}`}>
+                <button className={`${styles.btn} ${location.pathname === '/sobre' ? styles.active : ''}`} onClick={toggleResponsive}>
                     <Link to="/sobre">SOBRE NÓS</Link>
                 </button>
             </div>
