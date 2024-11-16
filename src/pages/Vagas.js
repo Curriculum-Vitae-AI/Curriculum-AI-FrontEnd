@@ -4,6 +4,8 @@ import { Link } from 'react-router-dom';
 import { listVacancy } from '../services/VacancyService.js';
 import { showToastSuccess, showToastError, showToastGenericError } from '../components/Toaster.js';
 
+import styles from "../styles/components/Forms.module.css";
+
 function Vagas() {
 
     const [role, setRole] = useState('');
@@ -60,8 +62,8 @@ function Vagas() {
     };
 
     return (
-        <div className="Vagas">
-            <form onSubmit={handleSubmit}>
+        <div className={styles.Vagas}>
+            <form onSubmit={handleSubmit} className={styles.form}>
                 <div>
                     <div>
                         <h1>Cargo desejado *</h1>
@@ -98,7 +100,7 @@ function Vagas() {
                         </div>
                     ) : undefined}
                 </div>
-                <div className="botoes">
+                <div className={styles.botoes}>
                     <Link to="/"><button className="btnVoltar">VOLTAR</button></Link>
                     <button
                         className={loading ? "btnLoading" : "btnDownload"}

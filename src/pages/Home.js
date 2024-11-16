@@ -4,8 +4,6 @@ import Card from '../components/Card';
 import imgRoadmap from "../assets/Home/imgRoadmap.svg";
 import imgCarta from "../assets/Home/imgCarta.svg";
 import imgVagas from "../assets/Home/imgVagas.svg";
-import FlechaDireita from '../assets/Home/flechaDireita.svg';
-import FlechaEsquerda from '../assets/Home/flechaEsquerda.svg';
 import styles from "../styles/pages/Home.module.css";
 
 function Home() {
@@ -73,13 +71,13 @@ function Home() {
     <div className={styles.Home}>
       <div className={styles.cardHome}>
         <div className={styles.carousel}>
-          <button onClick={prevItem} className={styles.carouselBtn}><img className={styles.btnFlecha} src={FlechaEsquerda} alt='Botão anterior' /></button>
+          <button onClick={prevItem} className={styles.carouselBtn}><div className={styles.btnFlecha} id={styles.first} alt='Botão anterior' /></button>
 
           <div className={styles.carouselItem}>
             {items[currentIndex].content}
           </div>
 
-          <button onClick={nextItem} className={styles.carouselBtn}> <img className={styles.btnFlecha} src={FlechaDireita} alt='Botão próximo'/> </button>
+          <button onClick={nextItem} className={styles.carouselBtn}> <div className={styles.btnFlecha} id={styles.second} alt='Botão próximo'/> </button>
         </div>
       </div>
     </div>

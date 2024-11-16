@@ -6,6 +6,8 @@ import { downloadPdf } from '../utils/PdfUtils.js';
 import { getMotivationLetter } from '../services/MotivationLetterService.js';
 import { showToastSuccess, showToastError, showToastGenericError } from '../components/Toaster.js';
 
+import styles from "../styles/components/Forms.module.css";
+
 function CartaDeMotivacao() {
 
     const [loading, setLoading] = useState(false);
@@ -48,9 +50,9 @@ function CartaDeMotivacao() {
     }
 
     return (
-        <div className="CartaDeMotivacao">
+        <div className={styles.CartaDeMotivacao}>
             <div>
-                <form onSubmit={handleSubmit}>
+                <form className={styles.form} onSubmit={handleSubmit}>
                     <div>
                         <h1>Nome da empresa *</h1>
                         <input
@@ -81,7 +83,7 @@ function CartaDeMotivacao() {
                             maxLength={100}
                         />
                     </div>
-                    <div className="botoes">
+                    <div className={styles.botoes}>
                         <Link to="/"><button className="btnVoltar">VOLTAR</button></Link>
                         <button
                             className={loading ? "btnLoading" : "btnDownload"}
