@@ -1,7 +1,7 @@
 .card {
     display: flex;
     width: 100%;
-    max-width: 900px;
+    max-width: 1000px;
 }
 
 .esquerda {
@@ -43,7 +43,7 @@
 }
 
 .direita {
-    width: 350px;
+    width: 500px;
     display: flex; 
     flex-direction: column; 
     justify-content: center;
@@ -128,5 +128,8 @@
 @media (max-width: 600px){
     .esquerda{
         width: 150%;
+    }
+    .direita{
+        display: none;
     }
 }

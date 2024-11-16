@@ -6,11 +6,11 @@
 }
 
 .cardHome {
-    padding: 3.125rem;
+    padding: 9rem;
     background: linear-gradient(#052D77, #1045A8);
     border-radius: 30px;
     color: white;
-    width: 90%;
+    width: 100%;
     max-width: 1096px;
     height: 400px;
 }
@@ -83,10 +83,6 @@
 }
 
 @media (max-width: 1188px){
-    .btnFlecha{
-        width: 2.5rem;
-        height: 2.5rem;
-    }
     .carouselBtn {
         padding: 10px;
     }
