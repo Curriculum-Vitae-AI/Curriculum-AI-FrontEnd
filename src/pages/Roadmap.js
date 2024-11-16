@@ -6,6 +6,8 @@ import { downloadPdf } from '../utils/PdfUtils.js';
 import { getRoadMap } from '../services/RoadMapService.js'
 import { showToastSuccess, showToastError, showToastGenericError } from '../components/Toaster.js';
 
+import styles from "../styles/components/Forms.module.css";
+
 function Roadmap() {
 
   const [job, setJob] = useState('');
@@ -41,8 +43,8 @@ function Roadmap() {
   }
 
   return (
-    <div className="Roadmap">
-      <form onSubmit={handleSubmit}>
+    <div className={styles.Roadmap}>
+      <form  className={styles.form} onSubmit={handleSubmit}>
         <div>
           <h1>Vaga *</h1>
           <textarea
@@ -53,7 +55,7 @@ function Roadmap() {
             maxLength={100}
           />
         </div>
-        <div className="botoes">
+        <div className={styles.botoes}>
           <Link to="/">
             <button className="btnVoltar">VOLTAR</button>
           </Link>

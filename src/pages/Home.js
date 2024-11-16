@@ -4,8 +4,6 @@ import Card from '../components/Card';
 import imgRoadmap from "../assets/Home/imgRoadmap.svg";
 import imgCarta from "../assets/Home/imgCarta.svg";
 import imgVagas from "../assets/Home/imgVagas.svg";
-import FlechaDireita from '../assets/Home/flechaDireita.svg';
-import FlechaEsquerda from '../assets/Home/flechaEsquerda.svg';
 import styles from "../styles/pages/Home.module.css";
 
 function Home() {

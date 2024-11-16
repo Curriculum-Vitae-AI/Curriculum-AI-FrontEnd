@@ -101,3 +101,12 @@
         width: auto;
     }
 }
+
+@media (max-width: 600px){
+    .Home{
+        padding: 2rem 1rem;
+    }
+    .carouselBtn{
+        margin-top: 130%;
+    }
+}
