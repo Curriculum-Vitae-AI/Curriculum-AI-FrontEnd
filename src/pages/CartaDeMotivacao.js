@@ -31,7 +31,7 @@ function CartaDeMotivacao() {
             showToastSuccess('Carta de motivação gerada com sucesso!');
             cleanFields();
         } catch (exception) {
-            const errorData = await exception?.response?.data?.text();
+            const errorData = await exception?.response?.data?.text() ? exception?.response?.data?.text() : undefined;
             if (errorData) {
                 const error = JSON.parse();
                 showToastError(error.error);
@@ -57,7 +57,7 @@ function CartaDeMotivacao() {
                         <h1>Nome da empresa *</h1>
                         <input
                             required
-                            placeholder="Qual é o nome da empresa?"
+                            placeholder="Qual é o nome da empresa? Max. 30 caracteres"
                             value={company}
                             onChange={(e) => setCompany(e.target.value)}
                             maxLength={30}
@@ -67,7 +67,7 @@ function CartaDeMotivacao() {
                         <h1>Cargo desejado *</h1>
                         <input
                             required
-                            placeholder="Qual é a vaga?"
+                            placeholder="Qual é a vaga? Max. 30 caracteres"
                             value={role}
                             onChange={(e) => setRole(e.target.value)}
                             maxLength={30}
@@ -77,7 +77,7 @@ function CartaDeMotivacao() {
                         <h1>Experiência *</h1>
                         <textarea
                             required
-                            placeholder="Escreva sua experiência"
+                            placeholder="Escreva sua experiência. Max. 100 caracteres"
                             value={experience}
                             onChange={(e) => setExperience(e.target.value)}
                             maxLength={100}

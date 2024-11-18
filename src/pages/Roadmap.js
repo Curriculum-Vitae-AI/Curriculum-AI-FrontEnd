@@ -27,7 +27,7 @@ function Roadmap() {
       showToastSuccess('RoadMap gerado com sucesso!');
       cleanFields();
     } catch (exception) {
-      const errorData = await exception?.response?.data?.text();
+      const errorData = await exception?.response?.data?.text() ? exception?.response?.data?.text() : undefined;
       if (errorData) {
         showToastError(errorData.error);
       } else {
@@ -48,7 +48,7 @@ function Roadmap() {
         <div>
           <h1>Vaga *</h1>
           <textarea
-            placeholder="Qual vaga quer se candidatar?"
+            placeholder="Qual vaga quer se candidatar? Max. 100 caracteres"
             required
             value={job}
             onChange={(e) => setJob(e.target.value)}

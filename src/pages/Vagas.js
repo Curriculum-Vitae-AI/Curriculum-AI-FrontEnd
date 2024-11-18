@@ -68,7 +68,7 @@ function Vagas() {
                     <div>
                         <h1>Cargo desejado *</h1>
                         <input
-                            placeholder="Informe o nome do cargo desejado para realizar a busca"
+                            placeholder="Informe o nome do cargo desejado para realizar a busca. Max. 30 caracteres"
                             required
                             value={role}
                             onChange={(e) => setRole(e.target.value)}
@@ -78,7 +78,7 @@ function Vagas() {
                     <div>
                         <h1>Localidade *</h1>
                         <input
-                            placeholder="Informe o local da vaga"
+                            placeholder="Informe o local da vaga. Max. 30 caracteres"
                             required
                             value={locality}
                             onChange={(e) => setLocality(e.target.value)}
